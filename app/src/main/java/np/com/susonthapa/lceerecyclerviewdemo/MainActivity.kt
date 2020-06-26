@@ -54,6 +54,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // handle the retry button
+        binding.linuxRecyclerView.setOnRetryClickListener {
+            binding.toggleView.check(R.id.content_button)
+        }
+
     }
 
 

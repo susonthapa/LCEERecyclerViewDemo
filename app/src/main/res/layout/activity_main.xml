@@ -8,18 +8,23 @@
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggle_view"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:checkedButton="@id/content_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loading_button"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Loading" />
 
         <com.google.android.material.button.MaterialButton
@@ -27,6 +32,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Content" />
 
         <com.google.android.material.button.MaterialButton
@@ -34,6 +40,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Empty" />
 
         <com.google.android.material.button.MaterialButton
@@ -41,6 +48,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Error" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
@@ -49,11 +57,10 @@
         android:id="@+id/linux_recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
-        app:emptyText="Oops! Nothing Here"
-        app:errorText="Something Just Blew Up!"
         app:emptyIcon="@drawable/ic_empty"
+        app:emptyText="Oops! Nothing Here"
         app:errorIcon="@drawable/ic_error"
+        app:errorText="Something Just Blew Up!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

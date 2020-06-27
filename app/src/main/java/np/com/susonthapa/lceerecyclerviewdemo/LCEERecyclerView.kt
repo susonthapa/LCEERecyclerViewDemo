@@ -7,13 +7,10 @@ import android.view.View
 import androidx.annotation.DrawableRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import np.com.susonthapa.lceerecyclerviewdemo.databinding.LceRecyclerLayoutBinding
-import np.com.susonthapa.lceerecyclerviewdemo.databinding.RecyclerEmptyLayoutBinding
-import np.com.susonthapa.lceerecyclerviewdemo.databinding.RecyclerErrorLayoutBinding
-import np.com.susonthapa.lceerecyclerviewdemo.databinding.RecyclerLoadingLayoutBinding
+import np.com.susonthapa.lceerecyclerviewdemo.databinding.*
 
 /**
- * Created by suson on 6/17/20
+ * Created by suson on 6/27/20
  * Custom recycler view with integrated error, empty and loading view
  */
 class LCEERecyclerView constructor(
@@ -25,8 +22,8 @@ class LCEERecyclerView constructor(
     constructor(context: Context, attrs: AttributeSet) : this(context, attrs, 0)
 
 
-    private val binding: LceRecyclerLayoutBinding =
-        LceRecyclerLayoutBinding.inflate(LayoutInflater.from(context), this)
+    private val binding: LceeRecyclerLayoutBinding =
+        LceeRecyclerLayoutBinding.inflate(LayoutInflater.from(context), this)
 
     private val errorBinding: RecyclerErrorLayoutBinding
     private val emptyBinding: RecyclerEmptyLayoutBinding
